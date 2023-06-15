@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChuy2798vjKQqp4RGBFmrZBBxRmJny8q0&libraries=places&callback=initMap">
+</script>
   <script src="./index.js"></script>
   <link rel="stylesheet" href="index.css"></link>
 </head>
@@ -14,12 +17,25 @@
       <h2>Let's calculate the distance between two points.</h2>
     </div>
     <div>
-      <form class="form" id="form">
+      <form class="form1" id="form1">
+        <h3></h3>
+        <label for="address">
+          You will need the latitude and longitude of each point to calculate the distance between them. 
+          If you don't know the coordinates of a point, enter an address here to get its latitude and longitude:
+        </label>
+        <input id="address" type="text" required>
+        <button type="submit">Retrieve coordinates</button> <span>Source: Google Maps API
+        </span>
+      </form>
+      <h3 id="latlon"></h3>
+    </div>
+    <div>
+      <form class="form2" id="form">
         <h3>Please enter a comma separated latitude and longitude value into each of the input fields below: </h2>
         <label for="a">Point A (e.g. 40.689247, -74.044502)</label>
-        <input id="a" placeholder="" required>
+        <input id="a" placeholder="40.689247, -74.044502" required>
         <label for="b">Point B (e.g. 36.746384, -95.934525)</label>
-        <input id="b" placeholder="" required>
+        <input id="b" placeholder="36.746384, -95.934525" required>
         <button type="submit">Calculate</button>
       </form>
 
