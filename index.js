@@ -36,6 +36,7 @@ function getDistanceFromLatLonInKm() {
 
   if (d === "NaN"){
     alert('The coordinates for either Point A or Point B are invalid. Please make sure that the coordinates are separated by a comma like the following:\n40.689247, -74.044502')
+    document.getElementById("result").innerHTML = '';
     return;
   }
 
@@ -75,6 +76,7 @@ const getAddress = async (address) => {
 
     } else {
       alert('The entered address is either not specific enough or does not exist. Please try a different address.')
+      document.getElementById("latlon").innerHTML='';
     }
   })};
   
