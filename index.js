@@ -34,6 +34,11 @@ function getDistanceFromLatLonInKm() {
   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
   var d = (R * c).toFixed(2); // Distance in km
 
+  if (d === "NaN"){
+    alert('The coordinates for either Point A or Point B are invalid. Please make sure that the coordinates are separated by a comma like the following:\n40.689247, -74.044502')
+    return;
+  }
+
   document.getElementById("result").innerHTML = `Distance: ${d}km`;
   // console.log(d);
 }
