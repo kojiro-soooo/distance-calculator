@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="index.css"></link>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h2>Let's calculate the distance between two points.</h2>
+    </div>
+    <div>
+      <form class="form" id="form">
+        <h3>Please enter a comma separated latitude and longitude value into each of the input fields below: </h2>
+        <label for="a">Point A (e.g. 40.689247, -74.044502)</label>
+        <input id="a" placeholder="" required>
+        <label for="b">Point B (e.g. 36.746384, -95.934525)</label>
+        <input id="b" placeholder="" required>
+        <button type="submit">Calculate</button>
+      </form>
+
+      <p>Note: The distance between Point A and Point B is calculated using the Haversine formula, 
+        which is used to calculate the shortest distance between two points on a perfect sphere. 
+        Given that the Earth is not a perfect sphere, the distance calculated here is approximate.
+        <a href="https://www.educative.io/answers/how-to-calculate-distance-using-the-haversine-formula">
+          See this Educative.io article for more information.
+        </a>
+      </p>
+      <h3 id="result"></h3>
+    </div>
+  </div>
+</body>
+</html>
